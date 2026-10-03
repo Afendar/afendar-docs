@@ -1,0 +1,57 @@
+site_name: Afendar Documentation
+site_description: Technical documentation for Afendar projects
+site_author: Afendar
+site_url: http://afendar-docs.local
+
+theme: 
+  name: material
+  language: fr
+
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Mode sombre
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Mode clair 
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+
+nav:
+- Accueil: index.md
+- API:
+    - Présentation: api/index.md
+- Administration:
+    - Présentation: admin/index.md
+- Front:
+    - Présentation: front/index.md
+- Bugs:
+    - Présentation: bugs/index.md
