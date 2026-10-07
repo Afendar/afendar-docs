@@ -1,0 +1,58 @@
+@use "variables";
+
+//Code
+
+.md-typeset :not(pre) > code {
+    font-family:
+        "Menlo",
+        "Liberation Mono",
+        "Consolas",
+        "DejaVu Sans Mono",
+        "Ubuntu Mono",
+        "Courier New",
+        monospace;
+    padding: 0.15em 0.35em;
+    white-space: pre-wrap;
+    word-break: break-word;
+    border-radius: 4px;
+    font-size: 90%;
+}
+
+[data-md-color-scheme="default"] .md-typeset :not(pre) > code {
+    background-color: #{variables.$code-bg-color};
+    color: #{variables.$code-color};
+}
+
+[data-md-color-scheme="slate"] .md-typeset :not(pre) > code {
+    background-color: #{variables.$code-bg-color-dark};
+    color: #{variables.$code-color-dark};
+}
+
+//Lists
+li small {
+    color: #{variables.$legend-color};
+    font-size: 0.85em;
+    font-weight: 400;
+
+    &::before {
+        content: "- ";
+    }
+}
+
+[data-md-color-scheme="slate"] li small {
+    color: #{variables.$legend-color-dark};
+}
+
+// Tables
+.md-typeset .md-typeset__table {
+  width: 100%;
+  display:table;
+}
+
+.md-typeset table:not([class]) {
+  width: 100%;
+  display:table;
+}
+
+[data-md-color-scheme="default"] .md-typeset table thead { background-color: #{variables.$table-header-bg-color}; }
+[data-md-color-scheme="slate"] .md-typeset table thead { background-color: #{variables.$table-header-bg-color-dark}; }

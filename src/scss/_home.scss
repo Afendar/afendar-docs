@@ -1,0 +1,112 @@
+@use "variables";
+
+.home-hero {
+    padding: 3rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: variables.$border-radius;
+
+    background: linear-gradient(
+        135deg,
+        var(--md-primary-fg-color),
+        var(--md-primary-fg-color--dark)
+    );
+
+    color: white;
+
+    h2 {
+        color: white;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.home-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2rem;
+
+    a {
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        padding: 0.6rem 1rem;
+        border-radius: 0.4rem;
+        text-decoration: none;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.12);
+        }
+    }
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.project-card {
+    padding: 1.5rem;
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: variables.$border-radius;
+    background: var(--md-default-bg-color);
+    position: relative;
+    transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+        
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--md-shadow-z2);
+        border-color: var(--project-color);
+    }
+
+    h3 {
+        margin-top: 0;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+
+    .project-card__link {
+        display: inline-block;
+
+        margin-top: 0.75rem;
+
+        color: var(--project-color);
+
+        font-weight: 600;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.project-card--api {
+    --project-color: #{variables.$api-color};
+}
+
+.project-card--admin {
+    --project-color: #{variables.$admin-color};
+}
+
+.project-card--front {
+    --project-color: #{variables.$front-color};
+}
+
+.project-card--bugs {
+    --project-color: #{variables.$bugs-color};
+}
+
+@media screen and (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-hero {
+        padding: 2rem 1.25rem;
+    }
+}

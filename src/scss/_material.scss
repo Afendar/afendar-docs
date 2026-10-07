@@ -1,0 +1,7 @@
+@use "variables";
+
+:root > * {
+    --md-primary-fg-color: #{variables.$primary};
+    --md-primary-fg-color--light: #{variables.$primary-light};
+    --md-primary-fg-color--dark: #{variables.$primary-dark};
+}

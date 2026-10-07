@@ -5,6 +5,8 @@ site_url: http://afendar-docs.local
 
 theme: 
   name: material
+  favicon: images/favicon.ico
+  logo: images/logo.png
   language: fr
 
   features:
@@ -19,12 +21,16 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-sunny
         name: Mode sombre
 
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-night
         name: Mode clair 
@@ -35,7 +41,11 @@ plugins:
 markdown_extensions:
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -45,8 +55,14 @@ markdown_extensions:
   - attr_list
   - md_in_html
 
+extra_css:
+  - stylesheets/extra.css
+
 nav:
-- Accueil: index.md
+- Accueil: 
+    - Présentation: index.md
+    - Installation: install.md
+    - Configuration: configuration.md
 - API:
     - Présentation: api/index.md
 - Administration:

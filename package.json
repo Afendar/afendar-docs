@@ -1,0 +1,11 @@
+{
+  "name": "afendar-docs",
+  "private": true,
+  "scripts": {
+    "build": "sass src/scss/main.scss docs/stylesheets/extra.css --style=expanded --source-map",
+    "watch": "sass src/scss/main.scss docs/stylesheets/extra.css --style=expanded --source-map --watch"
+  },
+  "devDependencies": {
+    "sass": "^1.80.0"
+  }
+}

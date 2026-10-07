@@ -1,0 +1,110 @@
+@use "variables";
+
+.project-hero {
+    position: relative;
+    overflow: hidden;
+    margin: 0 0 2.5rem;
+    padding: 3rem;
+    border-radius: variables.$border-radius;
+    background:
+        linear-gradient(
+            135deg,
+            var(--md-primary-fg-color),
+            var(--md-primary-fg-color--dark)
+        );
+    color: white;
+    box-shadow: var(--md-shadow-z2);
+
+    // Decorative background
+    &::after {
+        content: "";
+        position: absolute;
+        top: -40%;
+        right: -10%;
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.08);
+        pointer-events: none;
+    }
+
+    > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    h2 {
+        margin-top: 0;
+        color: white;
+        font-size: 2rem;
+    }
+
+    p {
+        max-width: 800px;
+        margin-bottom: 0;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+}
+
+
+// Variantes
+
+.project-hero--api {
+    --hero-color: #{variables.$api-color};
+    --hero-color-dark: #{variables.$api-color-dark};
+}
+
+.project-hero--admin {
+    --hero-color: #{variables.$admin-color};
+    --hero-color-dark: #{variables.$admin-color-dark};
+}
+
+.project-hero--front {
+    --hero-color: #{variables.$front-color};
+    --hero-color-dark: #{variables.$front-color-dark};
+}
+
+.project-hero--bugs {
+    --hero-color: #{variables.$bugs-color};
+    --hero-color-dark: #{variables.$bugs-color-dark};
+}
+
+.project-hero[class*="project-hero--"] {
+    background:
+        linear-gradient(
+            135deg,
+            var(--hero-color, var(--md-primary-fg-color)),
+            var(--hero-color-dark, var(--md-primary-fg-color--dark))
+        );
+}
+
+.project-content-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 2rem;
+    align-items: start;
+}
+
+// Responsive
+
+@media screen and (max-width: 768px) {
+    .project-hero {
+        padding: 2rem 1.5rem;
+
+        h2 {
+            font-size: 1.6rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .project-content-grid {
+        grid-template-columns: 1fr;
+    }
+}
