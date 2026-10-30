@@ -2,8 +2,13 @@
   "name": "afendar-docs",
   "private": true,
   "scripts": {
-    "build": "sass src/scss/main.scss docs/stylesheets/extra.css --style=expanded --source-map",
-    "watch": "sass src/scss/main.scss docs/stylesheets/extra.css --style=expanded --source-map --watch"
+    "build": "cp -r node_modules/@fortawesome/fontawesome-free/webfonts docs/webfonts && sass src/scss/main.scss docs/stylesheets/extra.css --load-path=node_modules --style=expanded --source-map",
+    "watch": "sass src/scss/main.scss docs/stylesheets/extra.css --load-path=node_modules --style=expanded --source-map --watch",
+    "copy:swagger": "mkdir -p docs/assets/swagger-ui && cp node_modules/swagger-ui-dist/swagger-ui.css node_modules/swagger-ui-dist/swagger-ui-bundle.js docs/assets/swagger-ui/"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.3.1",
+    "swagger-ui-dist": "^5.33.2"
   },
   "devDependencies": {
     "sass": "^1.80.0"

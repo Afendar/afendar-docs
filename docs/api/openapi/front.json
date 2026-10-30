@@ -1,0 +1,218 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Afendar API",
+        "description": "API for Afendar Games projects",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/issues/{id}": {
+            "get": {
+                "tags": [
+                    "Issues"
+                ],
+                "operationId": "get_issuelist",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "pattern": "\\d+"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/api/preview/{token}": {
+            "get": {
+                "tags": [
+                    "Preview"
+                ],
+                "operationId": "get_previewget",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "pattern": "[a-f0-9]{64}"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/api/preview/{id}": {
+            "get": {
+                "tags": [
+                    "Preview"
+                ],
+                "operationId": "get_previewindex",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "pattern": "\\d+"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Preview"
+                ],
+                "operationId": "delete_previewdelete",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "pattern": "\\d+"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "Preview"
+                ],
+                "operationId": "patch_previewupdate",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "pattern": "\\d+"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/api/preview": {
+            "post": {
+                "tags": [
+                    "Preview"
+                ],
+                "operationId": "post_previewadd",
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/api/projects/{id}": {
+            "get": {
+                "tags": [
+                    "Projects"
+                ],
+                "operationId": "get_projectlist",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "pattern": "\\d+"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/api/projects/{id}/issues": {
+            "get": {
+                "tags": [
+                    "Projects"
+                ],
+                "operationId": "get_projectlist_issues",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "pattern": "\\d+"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/api/social/": {
+            "get": {
+                "tags": [
+                    "Social"
+                ],
+                "operationId": "get_sociallist",
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Issues",
+            "description": "Projects issues used into afendar-bugs website."
+        },
+        {
+            "name": "Preview",
+            "description": "Preview management for page preview before publishing them."
+        },
+        {
+            "name": "Projects",
+            "description": "Projects endpoints for games and other"
+        },
+        {
+            "name": "Social",
+            "description": "Socials endpoints for managing shared social links URLs and afendar socials medias"
+        }
+    ]
+}

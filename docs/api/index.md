@@ -53,4 +53,9 @@ Elle centralise la logique métier, la gestion des données et les fonctionnalit
 - [CMS](user-interfaces/cms/index.md) <small>Thèmes, blocs, SEO</small>
 - [Widget]()
 
+## OpenAPI
+
+- [Front-end](openapi/front.md)
+- [Back-end](openapi/admin.md)
+
 </div>

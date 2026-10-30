@@ -1,0 +1,182 @@
+/* Intégration avec les couleurs de MkDocs Material */
+.swagger-ui {
+  font-family: var(--md-text-font-family);
+  color: var(--md-default-fg-color);
+}
+
+.swagger-ui .info .title,
+.swagger-ui .opblock-tag,
+.swagger-ui .parameter__name,
+.swagger-ui .parameter__type,
+.swagger-ui table thead tr th,
+.swagger-ui .response-col_status {
+  color: var(--md-default-fg-color);
+}
+
+.swagger-ui .scheme-container,
+.swagger-ui section.models {
+  background: var(--md-code-bg-color);
+}
+
+.swagger-ui a {
+  color: var(--md-accent-fg-color);
+}
+
+/* Fond et texte en mode sombre */
+[data-md-color-scheme="slate"] .swagger-ui .scheme-container,
+[data-md-color-scheme="slate"] .swagger-ui section.models,
+[data-md-color-scheme="slate"] .swagger-ui .model-box {
+  background: var(--md-code-bg-color);
+  color: var(--md-default-fg-color);
+}
+
+[data-md-color-scheme="slate"] .swagger-ui .info p,
+[data-md-color-scheme="slate"] .swagger-ui .markdown p,
+[data-md-color-scheme="slate"] .swagger-ui .renderedMarkdown p {
+  color: var(--md-default-fg-color);
+}
+
+[data-md-color-scheme="slate"] .swagger-ui input,
+[data-md-color-scheme="slate"] .swagger-ui select,
+[data-md-color-scheme="slate"] .swagger-ui textarea {
+  color: var(--md-default-fg-color);
+  background: var(--md-default-bg-color);
+}
+
+/* Fond et texte général de Swagger UI */
+[data-md-color-scheme="slate"] #swagger-ui {
+color: #d5dbe3;
+}
+
+[data-md-color-scheme="slate"] #swagger-ui .wrapper {
+max-width: 100%;
+}
+
+[data-md-color-scheme="slate"] #swagger-ui,
+[data-md-color-scheme="slate"] #swagger-ui .opblock-tag,
+[data-md-color-scheme="slate"] #swagger-ui .info .title,
+[data-md-color-scheme="slate"] #swagger-ui .info p,
+[data-md-color-scheme="slate"] #swagger-ui .markdown p,
+[data-md-color-scheme="slate"] #swagger-ui .markdown li {
+color: #d5dbe3;
+}
+
+/* Bandeau de paramètres et sections */
+[data-md-color-scheme="slate"] #swagger-ui .opblock,
+[data-md-color-scheme="slate"] #swagger-ui .scheme-container,
+[data-md-color-scheme="slate"] #swagger-ui section.models,
+[data-md-color-scheme="slate"] #swagger-ui .model-container {
+background: #252a33;
+border-color: #414957;
+box-shadow: none;
+}
+
+[data-md-color-scheme="slate"] #swagger-ui .opblock-tag {
+border-color: #414957;
+}
+
+[data-md-color-scheme="slate"] #swagger-ui .opblock .opblock-summary-description,
+[data-md-color-scheme="slate"] #swagger-ui .opblock .opblock-summary-path,
+[data-md-color-scheme="slate"] #swagger-ui .parameter__name,
+[data-md-color-scheme="slate"] #swagger-ui .parameter__type,
+[data-md-color-scheme="slate"] #swagger-ui .response-col_status,
+[data-md-color-scheme="slate"] #swagger-ui table thead tr th {
+color: #c3ccd8;
+}
+
+/* GET : vert sauge */
+[data-md-color-scheme="slate"] #swagger-ui .opblock.opblock-get {
+background: rgba(93, 145, 119, 0.10);
+border-color: #527d68;
+}
+
+[data-md-color-scheme="slate"] #swagger-ui .opblock.opblock-get .opblock-summary-method {
+background: #527d68;
+}
+
+/* POST : bleu grisé */
+[data-md-color-scheme="slate"] #swagger-ui .opblock.opblock-post {
+background: rgba(100, 133, 180, 0.10);
+border-color: #5b78a0;
+}
+
+[data-md-color-scheme="slate"] #swagger-ui .opblock.opblock-post .opblock-summary-method {
+background: #5b78a0;
+}
+
+/* PUT : ocre doux */
+[data-md-color-scheme="slate"] #swagger-ui .opblock.opblock-put {
+background: rgba(180, 145, 83, 0.10);
+border-color: #9a7d4e;
+}
+
+[data-md-color-scheme="slate"] #swagger-ui .opblock.opblock-put .opblock-summary-method {
+background: #9a7d4e;
+}
+
+/* PATCH : violet désaturé */
+[data-md-color-scheme="slate"] #swagger-ui .opblock.opblock-patch {
+background: rgba(150, 125, 180, 0.10);
+border-color: #84709d;
+}
+
+[data-md-color-scheme="slate"] #swagger-ui .opblock.opblock-patch .opblock-summary-method {
+background: #84709d;
+}
+
+/* DELETE : rouge brique atténué */
+[data-md-color-scheme="slate"] #swagger-ui .opblock.opblock-delete {
+background: rgba(177, 104, 104, 0.10);
+border-color: #a16666;
+}
+
+[data-md-color-scheme="slate"] #swagger-ui .opblock.opblock-delete .opblock-summary-method {
+background: #a16666;
+}
+
+/* Champs, paramètres et réponses */
+[data-md-color-scheme="slate"] #swagger-ui input,
+[data-md-color-scheme="slate"] #swagger-ui select,
+[data-md-color-scheme="slate"] #swagger-ui textarea,
+[data-md-color-scheme="slate"] #swagger-ui .highlight-code,
+[data-md-color-scheme="slate"] #swagger-ui pre,
+[data-md-color-scheme="slate"] #swagger-ui .microlight {
+background: #1b1f26 !important;
+color: #d5dbe3 !important;
+border-color: #414957;
+}
+
+[data-md-color-scheme="slate"] #swagger-ui table tbody tr td {
+border-color: #414957;
+color: #c3ccd8;
+}
+
+[data-md-color-scheme="slate"] #swagger-ui .btn {
+box-shadow: none;
+}
+
+[data-md-color-scheme="slate"] #swagger-ui .btn.authorize {
+background: #527d68;
+border-color: #527d68;
+color: #f1f5f2;
+}
+
+[data-md-color-scheme="slate"] #swagger-ui .btn.execute {
+background: #5b78a0;
+border-color: #5b78a0;
+color: #fff;
+}
+
+/* Liens et textes secondaires */
+[data-md-color-scheme="slate"] #swagger-ui a {
+color: #9eb9dc;
+}
+
+[data-md-color-scheme="slate"] #swagger-ui .prop-type {
+color: #a9b8ca;
+}
+
+[data-md-color-scheme="slate"] #swagger-ui .response-col_description__inner p,
+[data-md-color-scheme="slate"] #swagger-ui .parameter__in {
+color: #aeb8c6;
+}

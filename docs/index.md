@@ -98,6 +98,8 @@ Cette section présente notamment :
 
 </div>
 
+[Voir les diagrammes d'architectures →](architecture/index.md)
+
 ---
 
 ## Développement de la documentation

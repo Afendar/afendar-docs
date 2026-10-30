@@ -16,65 +16,54 @@ L'Admin s'appuie notamment sur l'API Afendar pour la gestion des données et pro
 
 ---
 
-## Documentation
+<div class="project-content-grid" markdown>
 
-<div class="project-doc-grid" markdown>
+<div markdown>
 
-<div class="project-doc-card" markdown>
+## Les bases
 
-### 🧱 Architecture du Page Builder
+- [L'interface Afendar-Games Admin]()
+- [Les notification back-office]()
+- [Workflow de publication et correction]()
+- [Prévisualisation de contenus]()
 
-Découvrez l'architecture du Page Builder, son fonctionnement interne et les différents éléments qui permettent de construire une page dynamiquement.
+## Communauté
 
-**Contenu :**
+- [L'agenda]()
+- [Les mini jeux (doodles)]()
+- [Gestion des commentaires]()
+- [Gestion des revues utilisateurs]()
+- [Envoyer des messages sur les réseaux sociaux]()
 
-- architecture générale
-- structure des pages
-- composants du Page Builder
-- cycle de rendu
-- interactions avec l'API
+## Blog
 
-[Explorer l'architecture →](page-builder/index.md){ .md-button .md-button--primary }
+- [Gestion des catégories]()
+- [Publier des articles]()
 
-</div>
+## Projets / Jeux
 
-<div class="project-doc-card project-doc-card--soon" markdown>
+- [Gestion du catalogue]()
+- [Gestion des plateformes]()
+- [Gestion des catégories]()
 
-### 🧩 Composants du Page Builder
-
-Documentation détaillée des différents composants disponibles dans le Page Builder.
-
-<span class="doc-status">Documentation à venir</span>
-
-</div>
-
-<div class="project-doc-card project-doc-card--soon" markdown>
-
-### ⚙️ Configuration
-
-Configuration spécifique de l'application d'administration.
-
-<span class="doc-status">Documentation à venir</span>
+## Emissions
 
 </div>
 
+<div markdown>
+
+## Utilisateurs
+
+## Wikis
+
+## Gestion des bugs
+
+## Contenus statiques
+
+## Statistiques
+
+## Paramétrages
+
 </div>
 
----
-
-## Architecture générale
-
-L'application Admin communique principalement avec l'API Afendar pour récupérer et modifier les données.
-
-```mermaid
-graph LR
-    Admin[Afendar Admin] --> API[Afendar API]
-    Admin --> Builder[Page Builder]
-    Builder --> API
-    API --> MySQL[(MySQL)]
-    API --> Redis[(Redis)]
-```
-
-!!!info
-
-    Le Page Builder utilise les blocs et leur configuration fournis par l'API pour construire les pages administrables.
+</div>

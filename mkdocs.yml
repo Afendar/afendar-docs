@@ -56,7 +56,12 @@ markdown_extensions:
   - md_in_html
 
 extra_css:
+  - assets/swagger-ui/swagger-ui.css
   - stylesheets/extra.css
+
+extra_javascript:
+  - assets/swagger-ui/swagger-ui-bundle.js
+  - javascripts/swagger-init.js
 
 nav:
 - Accueil: 

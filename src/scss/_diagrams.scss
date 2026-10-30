@@ -1,0 +1,43 @@
+.diagram-box {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: .75rem;
+    padding-block: calc(.25rem * 3);
+    padding-inline: calc(.25rem * 3);
+    gap: calc(.25rem * 2);
+    align-items: center;
+    display:flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    .box {
+        box-sizing: border-box;
+        padding-block: calc(.25rem * 3);
+        padding-inline: calc(.25rem * 3);
+        align-items: center;
+        width: 100%;
+        flex-direction: column;
+        min-width: 0;
+        border:1px solid rgba(255, 255, 255, 0.4);
+        border-radius: calc(.5rem * 1);
+        display:flex;
+        &.without-borders {
+            border: 0;
+        }
+        p {
+            display:block;
+            margin:0;
+            padding:0;
+        }
+    }
+    .box-row {
+        flex-shrink: 0;
+        gap: calc(.25rem * 2);
+        align-items: flex-start;
+        width:100%;
+        flex-direction: row;
+        display:flex;
+        .box-col {
+            flex: 1 1 0%;
+
+        }
+    }
+}
