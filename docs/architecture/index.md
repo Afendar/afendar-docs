@@ -7,7 +7,8 @@ hide:
 ## Architecture 
 
 [Architecture générale `AR-01`](AR01-general-architecture.md){.md-button}
-[Architecture infrastructure `AR-02`](){.md-button}
+[Architecture infrastructure locale `AR-02`](AR02-local-infrastructure.md){.md-button}
+[Architecture infrastructure serveurs `AR-03`](){.md-button}
 
 ## Modélisation des données
 
