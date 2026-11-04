@@ -24,6 +24,7 @@ Elle centralise la logique métier, la gestion des données et les fonctionnalit
 
 - [Concepts généraux]()
 - [Configuration]()
+- [Authentification](./authentication/index.md) <small>Applications, Utilisateurs</small>
 - [Caches]()
 - [Journalisation]()
 - [Processus asynchrones]() <small>Plannification de tâches, jobs</small>
