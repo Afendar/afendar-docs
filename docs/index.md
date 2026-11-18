@@ -15,6 +15,7 @@ Cette documentation centralise l'installation, la configuration et l'utilisation
 <div class="home-actions" markdown>
 [🚀 Commencer l'installation](install.md)
 [⚙️ Configuration](configuration.md)
+[📅 Roadmap](roadmap.md)
 </div>
 
 </div>

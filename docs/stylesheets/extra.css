@@ -11898,4 +11898,42 @@ li small::before {
   flex: 1 1 0%;
 }
 
+.mkdocs-progress {
+  position: relative;
+  width: 100%;
+  height: 24px;
+  background-color: var(--md-default-fg-color--lightest, #e0e0e0);
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 0.75rem 0 1.25rem;
+}
+
+.mkdocs-progress-bar {
+  height: 100%;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.mkdocs-progress-bar.is-low {
+  background-color: #ef5350; /* Rouge < 30% */
+}
+
+.mkdocs-progress-bar.is-mid {
+  background-color: #ffa726; /* Orange 30% - 79% */
+}
+
+.mkdocs-progress-bar.is-high {
+  background-color: #66bb6a; /* Vert >= 80% */
+}
+
+.mkdocs-progress-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--md-default-fg-color, #111);
+}
+
 /*# sourceMappingURL=extra.css.map */
